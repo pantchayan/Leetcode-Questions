@@ -29,11 +29,11 @@ public:
             while(size-->0){
                 int curr = que.front();
                 que.pop();
+
                 if(curr == T){
                     return level;
                 }
-                
-                
+
                 for(int r: map[curr]){
                     if(!visRoutes[r]){
                         for(int bs : routes[r]){
@@ -45,8 +45,6 @@ public:
                         visRoutes[r] = true;
                     }
                 }
-                
-                
             }
             level++;
         }
